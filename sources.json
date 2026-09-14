@@ -14,5 +14,6 @@
   {"name": "王二小", "url": "https://9280.kstore.vip/newwex.json", "enabled": true, "interval_minutes": 360},
   {"name": "东篱", "url": "https://16151.kstore.space", "enabled": true, "interval_minutes": 360},
   {"name": "嗷呜", "url": "http://www.英格里希嗷呜.top/tv", "enabled": true, "interval_minutes": 360},
-  {"name": "潇洒", "url": "https://9877.kstore.space/single.json", "enabled": true, "interval_minutes": 360}
+  {"name": "潇洒", "url": "https://9877.kstore.space/single.json", "enabled": true, "interval_minutes": 360},
+  {"name": "EasyTV", "url": "https://gh-proxy.com/raw.githubusercontent.com/EasyXC/EasyTVbox/main/easytv.jpg", "enabled": true, "interval_minutes": 360}
 ]
