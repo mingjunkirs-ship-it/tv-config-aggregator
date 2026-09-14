@@ -61,6 +61,12 @@ async def build(
             return await sync_service.sync_source(source["id"])
 
     results = list(await asyncio.gather(*(sync(source) for source in sources)))
+    source_by_id = {source["id"]: source for source in sources}
+    for result in results:
+        source = source_by_id.get(result.get("sourceId"), {})
+        result["sourceName"] = source.get("name")
+        result["sourceUrl"] = source.get("url")
+        result["cachedSiteCount"] = result.get("siteCount", 0)
     config = sync_service.merged_config()
     if not config["sites"] and not allow_empty:
         raise RuntimeError("所有配置接口均不可用，且缓存中没有上一次成功结果；停止发布空配置")

@@ -22,7 +22,7 @@ class SourceFetcher:
         self.max_bytes = max_bytes
 
     async def fetch(self, source: dict[str, Any]) -> FetchResult:
-        headers = {"User-Agent": "TVConfigAggregator/1.0", **(source.get("headers") or {})}
+        headers = {"User-Agent": "okhttp/4.12.0", "Accept": "application/json,text/plain,*/*", **(source.get("headers") or {})}
         if source.get("etag"):
             headers["If-None-Match"] = source["etag"]
         if source.get("last_modified"):
